@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 import 'package:dash_chat_2/dash_chat_2.dart';
-import 'package:zebracakes/chatbots/treatment_bot.dart';
-import 'package:zebracakes/constants.dart';
+import '../chatbots/chatbots/treatment_bot.dart';
 
 import '../chatbots/diagnose_bot.dart';
 import '../chatbots/fitness_bot.dart';
@@ -26,9 +25,9 @@ class _ChatPageState extends State<ChatPage> {
   );
 
   final ChatUser _currentUser =
-      ChatUser(id: '1', firstName: 'Simon', lastName: 'Luthi');
+      ChatUser(id: '1', firstName: 'John', lastName: 'Smith');
   final ChatUser _gptChatUser =
-      ChatUser(id: '2', firstName: 'Healthee', lastName: '');
+      ChatUser(id: '2', firstName: 'GPT', lastName: '');
 
   List<ChatMessage> _messages = <ChatMessage>[];
   List<ChatUser> _typingUsers = <ChatUser>[];
@@ -54,7 +53,7 @@ class _ChatPageState extends State<ChatPage> {
             Center(
                 child: Image.asset('assets/Small_Circle.png',
                     width: 100, height: 100)),
-            Text('Healthee AI',
+            Text('Health AI',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             Text('How can I help you today?',
                 style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic)),
@@ -78,7 +77,7 @@ class _ChatPageState extends State<ChatPage> {
                      );
                     },
                     child: Text(
-                      'Get Diagnosis',
+                      'GPT Function 1',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -100,7 +99,7 @@ class _ChatPageState extends State<ChatPage> {
                       );
                     },
                     child: Text(
-                      'Create a Mealplan',
+                      'GPT Function 2',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -137,7 +136,7 @@ class _ChatPageState extends State<ChatPage> {
                                           
                     },
                     child: Text(
-                      'Treatment Options',
+                      'Get GPT Function 3',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -160,7 +159,7 @@ class _ChatPageState extends State<ChatPage> {
                       );
                      },
                     child: Text(
-                      'Fitness Coach',
+                      'Get GPT Function 4',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
