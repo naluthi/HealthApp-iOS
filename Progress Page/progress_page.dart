@@ -113,16 +113,16 @@ Widget _buildActivityIcon(IconData icon, String value) {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Rewards and Classes',
+            'Progress',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 4),          
           Text('Your Points: 23,920',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
           SizedBox(height: 14),
-          _buildRewardProgress('Yoga Class', 0.7, Colors.green),
-          _buildRewardProgress('10 Free Meals', 0.5, Colors.blue),
-          _buildRewardProgress('Wellness Retreat', 0.9, Colors.orange),
+          _buildRewardProgress('Progress 1', 0.7, Colors.green),
+          _buildRewardProgress('Progress 2', 0.5, Colors.blue),
+          _buildRewardProgress('Progress 3', 0.9, Colors.orange),
           // Add more rewards/classes as needed
         ],
       ),
