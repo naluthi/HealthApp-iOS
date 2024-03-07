@@ -12,9 +12,9 @@ class _ProgressPageState extends State<ProgressPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center( // Center the profile picture in the AppBar
+        title: Center( 
           child: CircleAvatar(
-            backgroundImage: AssetImage('assets/Profile_Small.png'), // Make sure this image is in your assets directory
+            backgroundImage: AssetImage('assets/profile.png'), 
           ),
         ),
         leading: IconButton(
@@ -25,7 +25,6 @@ class _ProgressPageState extends State<ProgressPage> {
           IconButton(
             icon: Icon(Icons.info_outline),
             onPressed: () {
-              // Handle info action
             },
           ),
         ],
@@ -36,8 +35,6 @@ class _ProgressPageState extends State<ProgressPage> {
           _buildFavoriteActivities(),
           _buildRewardsAndClasses(),
           _buildHabitStreakSelector(),
-          // _buildHabitTracking(), // The method to build the habit tracking can be added later
-          // _buildHistoricalProgress(), // The method to build the historical progress can be added later
         ],
       ),
     );
@@ -53,7 +50,7 @@ class _ProgressPageState extends State<ProgressPage> {
           style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 24.0),
         ),        
-        SizedBox(height: 12), // Adjust the space as needed
+        SizedBox(height: 12), 
         CircularPercentIndicator(
           radius: 60.0,
           lineWidth: 13.0,
@@ -67,24 +64,22 @@ class _ProgressPageState extends State<ProgressPage> {
           circularStrokeCap: CircularStrokeCap.round,
           progressColor: Colors.blue,
         ),
-        SizedBox(height: 15), // Reduced space to bring the elements closer
+        SizedBox(height: 15), 
       ],
     ),
   );
 }
 
 Widget _buildFavoriteActivities() {
-  // Implementing design as per the provided screenshot
   return Wrap(
     spacing: 20,
-    runSpacing: 20, // Adjust runSpacing to manage the vertical spacing
+    runSpacing: 20, 
     alignment: WrapAlignment.spaceEvenly,
     children: <Widget>[
       _buildActivityIcon(Icons.directions_bike, '4.15 miles'),
       _buildActivityIcon(Icons.stairs, '6 floors'),
       _buildActivityIcon(Icons.directions_walk, '8,153 steps'),
       _buildActivityIcon(Icons.local_fire_department, '416 cals'),
-      // ... Add other favorite activities as needed
     ],
   );
 }
@@ -123,7 +118,6 @@ Widget _buildActivityIcon(IconData icon, String value) {
           _buildRewardProgress('Progress 1', 0.7, Colors.green),
           _buildRewardProgress('Progress 2', 0.5, Colors.blue),
           _buildRewardProgress('Progress 3', 0.9, Colors.orange),
-          // Add more rewards/classes as needed
         ],
       ),
     ),
@@ -164,12 +158,12 @@ Widget _buildRewardProgress(String rewardName, double progress, Color color) {
           ],
         ),
          Container(
-            height: 300.0, // Adjust the height as necessary
+            height: 300.0,
             child: TabBarView(
               children: <Widget>[
-                _buildBarChart('Week'), // Bar chart for weekly streaks
-                _buildBarChart('Month'), // Bar chart for monthly streaks
-                _buildBarChart('Year'), // Bar chart for yearly streaks
+                _buildBarChart('Week'),
+                _buildBarChart('Month'),
+                _buildBarChart('Year'),
               ],
             ),
           ),
@@ -179,23 +173,21 @@ Widget _buildRewardProgress(String rewardName, double progress, Color color) {
   }
 
  Widget _buildBarChart(String period) {
-    List<BarChartGroupData> barGroups = _generateBarGroups(period); // Implement this function based on your data
+    List<BarChartGroupData> barGroups = _generateBarGroups(period);
 
     return BarChart(
       BarChartData(
         barGroups: barGroups,
-        titlesData: FlTitlesData(show: true), // Setup your axis titles here
-        borderData: FlBorderData(show: true), // Hide or show the chart border
-        gridData: FlGridData(show: true), // Hide or show the gri
-        groupsSpace: barGroups.length * 10, // Adjust the space between bars
+        titlesData: FlTitlesData(show: true),
+        borderData: FlBorderData(show: true),
+        gridData: FlGridData(show: true),
+        groupsSpace: barGroups.length * 10,
 
       ),
     );
   }
 
   List<BarChartGroupData> _generateBarGroups(String period) {
-    // This method should generate your BarChartGroupData list based on the period
-    // For demonstration, let's just create a single group of bars
     return List.generate(5, (index) {
       return BarChartGroupData(
 
