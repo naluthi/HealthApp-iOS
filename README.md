@@ -1,6 +1,5 @@
 # HealthApp-IOS
 
-## Badges
 ![GitHub top language](https://img.shields.io/github/languages/top/naluthi/HealthApp-iOS) 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/naluthi/HealthApp-iOS) 
 ![Google Cloud Functions](https://img.shields.io/badge/Google%20Cloud%20Functions-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
@@ -11,13 +10,12 @@
 
 ## Description
 
-`HealthApp-IOS` is a mobile application tailored to individual health and wellness. This repository presents snippets and elements from the app, demonstrating key functionalities and the application's UI. Due to privacy rights and intellectual property considerations, the complete application is not publicly available. Information and UI elements displayed here have been modified for sharing purposes.
+This repository presents snippets and elements from my first build of a mobile application, demonstrating key functionalities from my other repositories and the application's UI. Due to privacy rights and intellectual property considerations, the complete application is not publicly available. Information and UI elements displayed here have been modified and simplified for sharing purposes.
 
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
 - [Challenges](#challenges)
-- [Lessons](#lessons)
 - [Usage](#usage)
 - [Sign In Page](#sign-in-page)
 - [Main Chatbot Page](#main-chatbot-page)
@@ -30,28 +28,33 @@
 
 ## Technologies Used
 
-- **Flutter** for a unified UI/UX across platforms.
-- **Firebase** for real-time data synchronization and user authentication.
-- **TestFlight**: for deployment.
+- `Flutter`:   for a unified UI/UX across platforms.
+- `Firebase`:    for real-time data synchronization and user authentication.
+- `TestFlight`: for deployment.
+- `Cocoapod`:  for managing dependencies.
+- `Ruby`:       for my DevOps pipeline for (CI/CD), backend API development, and automation and tooling. 
 
 
 ## Challenges
+Developing my first mobile application was a journey of discovery, filled with both challenges and opportunities to learn. The experience was both rigorous and rewarding which increased my technical skills and decision-making capabilities. Below is a streamlined account of the hurdles I encountered and the lessons learned while building this project:
 
-During the development, challenges such as adapting to mobile development, selecting suitable frameworks, dealing with iOS 17 updates and bugs in Xcode, and integrating Firebase for hosting and services were encountered and overcome.
+The initial phase of this project was characterized by doubt regarding the optimal tech stack to employ. After extensive research and deliberation, I found myself shifting between React and Flutter. Ultimately, Flutter was selected for its compatibility and seamless integration with various hosting services. Furthermore, choosing a hosting service was similarly challenging. I explored numerous options, including AWS, Google Cloud Functions, and SupaBase, before deciding on Google Cloud Functions for its ease of implementation with Flutter which is a Google-developed framework.
 
+A significant learning curve was encountered in integrating the application with Firebase, particularly for iOS deployment. The requirement for a unique iOS Bundle ID to upload and deploy to TestFlight was an unforeseen complication, contributing to a deep dive into the intricacies of the framework.
 
-## Lessons
-The experience was enriching, imparting valuable lessons in mobile application development, problem-solving, and continuous learning.
+The project's timeline coincided with the release of iOS 17.0 in the summer of 2023, which introduced unforeseen complications for developers working with Flutter and Xcode. These complications created compilation errors and the inability to debug the application using a Simulator. An extensive period of my time was dedicated to researching potential fixes, ultimately requiring a thorough review and cleanup of the project's IML files, Podfiles, and Node Modules to restore functionality and testing capabilities.
 
+Additionally, deployment hurdles were encountered with Podfiles and the Runner folder, which required me to create a new project from scratch. This process involved reverse engineering the application until the trigger for this error was discovered to achieve successful deployment.
 
-## Usage
+The project's timeline coincided with the release of iOS 17.0 in the summer of 2023, introducing unforeseen complications for developers working with Flutter and Xcode. This issue caused compilation issues and I was unable to debug the application on a Simulator. As a result, an extensive period of my time was dedicated to researching potential fixes, ultimately requiring a thorough review and cleanup of the project's IML files, Podfiles, and Node Modules to restore functionality and ability to test the application. 
 
-The app includes several key features, each with its dedicated UI. Here's how some of the core features are presented:
+Additionally, deployment hurdles were encountered with Podfiles and the Runner folder, leading to me creating a new project from scratch. Then reverse engineering the application to discover the trigger of these complications and eventually be able to successfully deploy the application. 
 
+# Usage
 
 ## Sign-In Page
 
-The Sign-in In Page provides a secure entry point to the HealthApp-IOS. Utilizing Firebase Authentication, users can sign in through their Google accounts or email with account creation by the application owner. 
+The Sign-in In Page provides a secure entry point to the application. Utilizing Firebase Authentication, users can sign in through their Google accounts or email once an account has been created by the application owner.
 
 <p align="left">
   <img src="assets/login-ui.png" alt="Sign In Page" width="200"/>
@@ -60,7 +63,7 @@ The Sign-in In Page provides a secure entry point to the HealthApp-IOS. Utilizin
 
 ## Main Chatbot Page
 
-The chat interface is built for dynamic conversations, enabling users to receive personalized advice, recommendations, and answers to health-related inquiries. This page is also includes shortcuts to specialized models in order to prevent use-case confusion, easy UI navigation and proof of concept. The chatbots are integrated to handle various topics including the examples below and more. 
+The chat interface is built for dynamic conversations, enabling users to receive personalized advice, recommendations, and answers to health-related topics. This page also includes shortcuts to specialized models to prevent use-case confusion, easy UI navigation, and proof of concept. The chatbots are integrated to handle various topics including but not limited to the ones shown below:
 
 <p align="left">
   <img src="assets/main-chatbot-ui.png" alt="Main Chatbot UI" width="200" style="margin-right: 10px;"/>
@@ -71,7 +74,7 @@ The chat interface is built for dynamic conversations, enabling users to receive
 
 ## Diagnosis AI Page
 
-This page implements the diagnostic feature of the chatbot.
+This page shows the resulting implementation of the diagnostic chatbot including the entire process from prompt creation to the response from the program. 
 
 <p align="left">
   <img src="assets/diagnosisAI-ui.png" alt="Diagnosis AI Detail" width="200" style="margin-right: 10px;"/>
@@ -82,7 +85,7 @@ This page implements the diagnostic feature of the chatbot.
 
 ## Other Chatbot Capabilities
 
-These examples show the page called when a shortcut is pressed on the `Main Chatbot Page` which featire additional capabilities the chatbot has and can cater to specific user question or request. 
+These examples show the UI and AI tool called when a shortcut is pressed on the `Main Chatbot Page`
 
 <p align="left">
   <img src="assets/mealplan-response.png" alt="Mealplan AI Response" width="200" style="margin-right: 10px;"/>
@@ -92,7 +95,7 @@ These examples show the page called when a shortcut is pressed on the `Main Chat
 
 ## Progress Page
 
-The Progress Page is a motivational tool within the app that tracks and displays the user's health and wellness journey. The page utilizes widgets like PercentIndicator and FLChart to visualize the user's progress in a digestible and engaging format. Users can see at a glance how far they've come in their goals, whether it's related to fitness, meditation, or other health activities.
+The Progress Page is a motivational tool within the app that tracks and displays the user's health and wellness journey. The page utilizes widgets like PercentIndicator and FLChart to visualize the user's progress in a digestible and engaging format. Users can see how far they've come in their goals, whether it's related to fitness, meditation, or other health activities.
 
 <p align="left">
   <img src="assets/progress-ui-1.png" alt="Progress Detail Top of Page" width="200" style="margin-right: 10px;"/>
