@@ -47,8 +47,8 @@ class _MealBotPageState extends State<MealBotPage> {
             SizedBox(height: 38),
             Center(child: Image.asset('assets/LuthiLogo.png', width: 100, height: 100)),
             SizedBox(height: 20), 
-            Text('Mealplan AI', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            Text('How can I help you mealplan?', style: TextStyle(fontSize: 18)),
+            Text('Diagnostic AI', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            Text('Tell me about your symptoms?', style: TextStyle(fontSize: 18)),
           ],
           Expanded(
             child: DashChat(
