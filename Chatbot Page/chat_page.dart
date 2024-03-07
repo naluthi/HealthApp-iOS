@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 import 'package:dash_chat_2/dash_chat_2.dart';
-import '../chatbots/chatbots/treatment_bot.dart';
+import '../chatbots/treatment_bot.dart';
+import 'package:zebracakes/constants.dart';
 
 import '../chatbots/diagnose_bot.dart';
 import '../chatbots/fitness_bot.dart';
@@ -32,32 +33,32 @@ class _ChatPageState extends State<ChatPage> {
   List<ChatMessage> _messages = <ChatMessage>[];
   List<ChatUser> _typingUsers = <ChatUser>[];
 
-  // Add a flag to determine if the first message has been sent
   bool _isFirstMessageSent = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.lightBlueAccent,
         toolbarHeight: 50,
         title: const Text(
-          'Healthee AI (Beta)',
+          'Health AI (Beta)',
           style: TextStyle(color: Colors.white),
         ),
       ),
       body: Column(
         children: [
           if (!_isFirstMessageSent) ...[
-            SizedBox(height: 38), // Space for logo
+            SizedBox(height: 80), 
             Center(
-                child: Image.asset('assets/Small_Circle.png',
+                child: Image.asset('assets/LuthiLogo.png',
                     width: 100, height: 100)),
+            SizedBox(height: 20), 
             Text('Health AI',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             Text('How can I help you today?',
                 style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic)),
-            SizedBox(height: 100), // Space for logo
+            SizedBox(height: 210), 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -115,7 +116,7 @@ class _ChatPageState extends State<ChatPage> {
 
 
 
-            SizedBox(height: 4), // Space for logo
+            SizedBox(height: 4), 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
@@ -136,7 +137,7 @@ class _ChatPageState extends State<ChatPage> {
                                           
                     },
                     child: Text(
-                      'Get GPT Function 3',
+                      'GPT Function 3',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -159,7 +160,7 @@ class _ChatPageState extends State<ChatPage> {
                       );
                      },
                     child: Text(
-                      'Get GPT Function 4',
+                      'GPT Function 4',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
