@@ -7,18 +7,17 @@
 ![iOS](https://img.shields.io/badge/iOS%20Development-000000?style=flat-square&logo=apple&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![CocoaPods](https://img.shields.io/badge/-CocoaPods-EE3322?style=flat-square&logo=cocoapods&logoColor=white)
-![TestFlight](https://img.shields.io/badge/TestFlight-02569B?style=flat-square&logo=apple&logoColor=white)
+
 
 ## Description
 
-`HealthApp-IOS` is a mobile application tailored to enhance individual health and wellness. This repository presents snippets and elements from the app, demonstrating key functionalities and the application's UI. Due to privacy rights and intellectual property considerations, the complete application is not publicly available. Information and UI elements displayed here have been modified for sharing purposes.
+`HealthApp-IOS` is a mobile application tailored to individual health and wellness. This repository presents snippets and elements from the app, demonstrating key functionalities and the application's UI. Due to privacy rights and intellectual property considerations, the complete application is not publicly available. Information and UI elements displayed here have been modified for sharing purposes.
 
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
 - [Challenges](#challenges)
 - [Lessons](#lessons)
-- [Features](#features)
 - [Usage](#usage)
 - [Sign In Page](#sign-in-page)
 - [Main Chatbot Page](#main-chatbot-page)
@@ -33,24 +32,16 @@
 
 - **Flutter** for a unified UI/UX across platforms.
 - **Firebase** for real-time data synchronization and user authentication.
-- **TestFlight**:
-- **Google Authentication**:
+- **TestFlight**: for deployment.
 
 
 ## Challenges
 
-During the development, challenges such as adapting to mobile development, selecting suitable frameworks, dealing with updates and bugs in Xcode, and integrating Firebase for hosting and services were encountered and overcome.
+During the development, challenges such as adapting to mobile development, selecting suitable frameworks, dealing with iOS 17 updates and bugs in Xcode, and integrating Firebase for hosting and services were encountered and overcome.
 
 
 ## Lessons
 The experience was enriching, imparting valuable lessons in mobile application development, problem-solving, and continuous learning.
-
-
-## Features
-
-- Google Authentication
-- Interactive Chatbot
-- Functional UI
 
 
 ## Usage
@@ -60,7 +51,7 @@ The app includes several key features, each with its dedicated UI. Here's how so
 
 ## Sign-In Page
 
-The Sign-in In Page provides a secure entry point to the HealthApp-IOS. Utilizing Firebase Authentication, users can sign in through their Google accounts
+The Sign-in In Page provides a secure entry point to the HealthApp-IOS. Utilizing Firebase Authentication, users can sign in through their Google accounts or email with account creation by the application owner. 
 
 <p align="left">
   <img src="assets/login-ui.png" alt="Sign In Page" width="200"/>
@@ -69,7 +60,7 @@ The Sign-in In Page provides a secure entry point to the HealthApp-IOS. Utilizin
 
 ## Main Chatbot Page
 
-The chat interface is built for dynamic conversations, enabling users to receive personalized advice, recommendations, and answers to health-related inquiries. The chatbots are integrated to handle various topics, including treatments, diagnoses, fitness, and meal planning.
+The chat interface is built for dynamic conversations, enabling users to receive personalized advice, recommendations, and answers to health-related inquiries. This page is also includes shortcuts to specialized models in order to prevent use-case confusion, easy UI navigation and proof of concept. The chatbots are integrated to handle various topics including the examples below and more. 
 
 <p align="left">
   <img src="assets/main-chatbot-ui.png" alt="Main Chatbot UI" width="200" style="margin-right: 10px;"/>
@@ -91,7 +82,7 @@ This page implements the diagnostic feature of the chatbot.
 
 ## Other Chatbot Capabilities
 
-These examples show the additional capabilities the chatbot has when the user chooses which specialized chat they want to communicate with. 
+These examples show the page called when a shortcut is pressed on the `Main Chatbot Page` which featire additional capabilities the chatbot has and can cater to specific user question or request. 
 
 <p align="left">
   <img src="assets/mealplan-response.png" alt="Mealplan AI Response" width="200" style="margin-right: 10px;"/>
@@ -111,7 +102,7 @@ The Progress Page is a motivational tool within the app that tracks and displays
 
 ## Articles Page
 
-The Articles page features a collection of wellness and health articles that users can browse. Selecting an article takes the user to an in-app browser. 
+The Articles page features a collection of wellness and health articles that users can browse. Selecting an article takes the user to an in-app browser where they can discover health-related topics.
 
 <p align="left">
   <img src="assets/ArticlesPage1.png" alt="Articles Page Overview" width="200" style="margin-right: 10px;"/>
